@@ -1,0 +1,44 @@
+<style>
+  .firstsh{
+    background-color: red;
+    height: 1000px;
+    width: 100px;
+  }
+   .secondsh{
+    background-color: red;
+    height: 1000px;
+    width: 100px;
+  }
+</style>
+
+<div>
+<label for="menu">
+choose an option 
+</label>
+<select id="menu">
+<option value="">...</option>
+<option value="Option 1">Option 1</option>
+<option value="Option 2">
+  
+  Option 2</option>
+<option value="date"> date</option>
+</select>
+
+</div>
+<p class="firstshow">
+
+</p>
+<script>
+  document.querySelector('#menu').addEventListener('change', function(){
+    if(this.value === 'Option 2'){
+      document.querySelector('.firstshow').innerHTML = `<p class="firstsh"></p>
+      <p style="background-color: blue;">
+    samson 
+  </p>
+      `;
+    } else {
+      document.querySelector('.firstshow').innerHTML = '';
+    }
+  });
+</script>
+

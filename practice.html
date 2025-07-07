@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>before and after </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet">
+  </head>
+  <body>
+    <style>
+.first::before{
+  content: counter(numbered);
+  color: lightblue;
+  display: block;
+}
+.first::after{
+  content: 'samson';
+  color: lightblue;
+  display: block;
+}
+    </style>
+    <div style="display: grid;place-items: center;">
+<p class="first" style="display: block;white-space: pre-line;">
+  Learning elemennt 
+  samsonn
+  ogundero
+  tobiloba
+</p>
+</div>
+
+<!-- Simple menu -->
+<div style="display: grid; place-items: center; margin-top: 20px;">
+  <label for="menu">Choose an option:</label>
+  <select id="menu">
+    <option value="">--Select--</option>
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+  <div id="result" style="margin-top: 10px; color: #2196f3;"></div>
+</div>
+
+<p class="sub" style="color: rgb(165, 214, 230);text-decoration: underline; display: grid;place-items: center; font-size: 22px;cursor: pointer;">
+  subscribe
+</p>
+
+<script>
+  // Simple menu logic
+  document.getElementById('menu').addEventListener('change', function() {
+    const result = document.getElementById('result');
+    if (this.value) {
+      result.textContent = 'You selected: ' + this.value;
+    } else {
+      result.textContent = '';
+    }
+  });
+</script>
+  </body>
+  </html>
+
+
+
+  notice
+
+  make it responsive but if it is on a desktop device leave it the way it as or if it is on a tab device make it looks like  the desktop design but make everythiing samaller a little bit  other wise add reponsiveness okay

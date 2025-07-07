@@ -1,0 +1,245 @@
+.trackingcal {
+ width: 950px;
+ height: 500px;
+ background-color: black;
+ transform: translate(160px,40px);
+}
+
+.profile {
+  height: 270px;
+width: 170px;
+  background-color: rgb(32, 100, 123);
+  border-radius: 20px;
+  transform: none;
+  box-sizing: border-box;
+  transform: translate(-240px,-70px);
+  position: absolute;
+  display: block;transform: translate(100px,50px);
+ 
+}
+.boxbelowprofile{
+  height: 140px;
+  width: 170px;
+  background-color: rgb(6, 36, 46);
+  border-radius: 20px;
+  transform: translate(100px,320px);
+  position: absolute;  
+}
+.besidebelowprofile1 {
+  height: 180px;
+width: 170px;
+  background-color: rgb(32, 100, 123);
+  border-radius: 20px;
+  transform: none;
+  box-sizing: border-box;
+  transform: translate(-240px,-70px);
+  position: absolute;
+  display: block;transform: translate(300px,50px);
+ 
+}
+.besidebelowprofile2 {
+  height: 180px;
+width: 170px;
+  background-color: rgb(32, 100, 123);
+  border-radius: 20px;
+  transform: none;
+  box-sizing: border-box;
+  transform: translate(-240px,-70px);
+  position: absolute;
+  display: block;transform: translate(300px,270px);
+ 
+}
+.sub2{
+  transform: translate(200px);
+}
+.sub3{
+  transform: translate(400px);
+}
+.profilepicture{
+  height: 45px;
+  width: 45px;
+  border-radius: 30px;
+  background-color: rgb(199, 199, 199);
+  transform: translate(25px,40px);
+}
+.profilpurpose{
+  color: rgb(167, 167, 167);
+    transform: translate(35px,60px);
+    font-size: 16px;
+}
+.profilname{
+  color: rgb(224, 224, 224);
+    transform: translate(20px,50px);
+    font-size: 26px;
+}
+ .Daily,.weekly,.monthly{
+   color: rgb(140, 140, 140);
+    transform: translate(20px,0px);
+    font-size: 15px;
+ }
+ .Daily:hover{
+  color: rgb(226, 226, 226);
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.5s;
+ }
+ .weekly:hover{
+  color: rgb(226, 226, 226);
+  text-decoration: underline;
+   cursor: pointer;
+    transition: 0.5s;
+ }
+ .monthly:hover{
+  color: rgb(226, 226, 226);
+  text-decoration: underline;
+   cursor: pointer;
+    transition: 0.5s;
+ }
+ .txy-indiv1{
+  color: rgb(185, 185, 185);
+transform: translate(20px,30px);
+ }
+ .txy-indiv2{
+  color: rgb(185, 185, 185);
+transform: translate(20px,30px);
+ }
+ .js-txt1,.js-txt3,.js-txt5,.js-txt7,.js-txt9,.js-txt11{
+  font-size: 40px;
+  color: rgb(220, 220, 220);
+  position: absolute;
+  transform: translate(30px,-15px);
+ }
+ .hrs{
+  transform: translate(80px,-15px);
+  font-size: 40px;
+  color: rgb(220, 220, 220);
+  position: absolute;
+ }
+ .js-txt2,.js-txt4,.js-txt6,.js-txt8,.js-txt10,.js-txt12{
+  font-size: 13px;
+  color: rgb(167, 167, 167);
+  position: absolute;
+  transform: translate(35px,70px);
+ }
+
+/* Tablet Styles */
+@media (max-width: 900px) {
+  .trackingcal {
+    width: 700px;
+    height: 420px;
+    transform: translate(20px, 20px);
+  }
+  .profile, .boxbelowprofile, .besidebelowprofile1, .besidebelowprofile2 {
+    width: 120px;
+    min-width: 100px;
+    max-width: 140px;
+  }
+  .profile {
+    height: 200px;
+    transform: translate(40px, 30px);
+  }
+  .boxbelowprofile {
+    height: 100px;
+    transform: translate(40px, 250px);
+  }
+  .besidebelowprofile1 {
+    height: 120px;
+    transform: translate(180px, 30px);
+  }
+  .besidebelowprofile2 {
+    height: 120px;
+    transform: translate(180px, 170px);
+  }
+  .profilepicture {
+    height: 35px;
+    width: 35px;
+    transform: translate(10px, 25px);
+  }
+  .profilpurpose, .profilname {
+    font-size: 13px;
+    transform: translate(10px, 35px);
+  }
+  .profilname {
+    font-size: 18px;
+  }
+  .js-txt1, .js-txt3, .js-txt5, .js-txt7, .js-txt9, .js-txt11 {
+    font-size: 28px;
+    transform: translate(15px, -10px);
+  }
+  .hrs {
+    font-size: 28px;
+    transform: translate(55px, -10px);
+  }
+  .js-txt2, .js-txt4, .js-txt6, .js-txt8, .js-txt10, .js-txt12 {
+    font-size: 10px;
+    transform: translate(20px, 45px);
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .trackingcal {
+    width: 100vw;
+    min-width: 0;
+    height: auto;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .profile, .boxbelowprofile, .besidebelowprofile1, .besidebelowprofile2 {
+    position: static;
+    width: 90vw;
+    min-width: 0;
+    max-width: 100vw;
+    margin: 10px 0;
+    transform: none;
+    display: block;
+  }
+  .profile {
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+  .boxbelowprofile, .besidebelowprofile1, .besidebelowprofile2 {
+    height: 80px;
+    padding: 10px;
+  }
+  .profilepicture {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    transform: none;
+  }
+  .profilpurpose, .profilname {
+    font-size: 12px;
+    transform: none;
+    margin: 0 5px;
+  }
+  .profilname {
+    font-size: 15px;
+  }
+  .js-txt1, .js-txt3, .js-txt5, .js-txt7, .js-txt9, .js-txt11 {
+    font-size: 20px;
+    transform: none;
+    position: static;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .hrs {
+    font-size: 20px;
+    transform: none;
+    position: static;
+    display: inline-block;
+  }
+  .js-txt2, .js-txt4, .js-txt6, .js-txt8, .js-txt10, .js-txt12 {
+    font-size: 9px;
+    transform: none;
+    position: static;
+    display: block;
+    margin-top: 5px;
+  }
+}
