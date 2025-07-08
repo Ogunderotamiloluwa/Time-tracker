@@ -1,0 +1,230 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.all{
+  height: 60vh;
+  width: 80%;
+  display: flex;
+   gap: 1rem;
+  
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.profile-all{
+  height: 100%;
+  width: 20%;
+  border-radius: 20px;
+ background-color: rgb(62, 8, 113);
+}
+.trackers{
+   height: 100%;
+  width: 80%;
+   display: flex;
+  gap: 1rem;
+   flex-direction: column;
+}
+.profile{
+  width: 100%;
+  height: 70%;
+  background-color: rgb(7, 127, 175);
+  border-radius: 20px;
+}
+.dashbord{
+  width: 100%;
+  height: 30%;
+  background-color: rgb(62, 8, 113);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 1rem;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: rgb(146, 146, 146);
+}
+.trackers1{
+width: 100%;
+height: 50%;
+display: flex;
+gap: 1rem;
+font-size: 22px;
+}
+.trackers2{
+width: 100%;
+height: 50%;
+display: flex;
+gap: 1rem;
+font-size: 22px;
+}
+.day:hover,
+.month:hover,
+.week:hover {
+  color: white;
+  text-decoration: underline;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.day:active {
+  color: white;
+  text-decoration: underline;
+}
+
+.work{
+  height: 100%;
+  width: 33%;
+  background-color: rgb(56, 5, 104);
+  border-radius: 20px;
+}
+.navwork{
+display: flex;
+gap: 2rem;
+color: white;
+transform: translate(15px,50px);
+}
+.navworki{
+display: flex;
+gap: 2rem;
+color: white;
+transform: translate(85px,55px);
+font-size: 40px;
+}
+.play{
+  height: 100%;
+  width: 33%;
+ background-color: rgb(56, 5, 104);
+ border-radius: 20px;
+}
+.study{
+  height: 100%;
+  width: 33%;
+  background-color: rgb(56, 5, 104);
+  border-radius: 20px;
+}
+.excersiise,.social,.selfc{
+   height: 100%;
+  width: 33%;
+  background-color: rgb(56, 5, 104);
+  border-radius: 20px;
+}
+.imging{
+  width: 28%;
+  height: 20%;
+  border-radius: 25px;
+  background-color: aliceblue;
+transform: translate(30%,70%);
+}
+.text1{
+  color: rgb(160, 160, 160);
+  font-size: 1rem;
+  transform: translate(10%,320%);
+}
+.profilename{
+   color: rgb(221, 221, 221);
+  font-size: 1.5rem;
+  width: 20%;
+  transform: translate(15px,70px);
+}
+.js-txt1,.js-txt3,.js-txt5,.js-txt7,.js-txt9,.js-txt11{
+   display: flex;
+gap: 2rem;
+color: white;
+transform: translate(30px,8px);
+font-size: 40px;
+}
+.js-txt2,.js-txt4,.js-txt6,.js-txt8,.js-txt10,.js-txt12{
+   display: flex;
+gap: 2rem;
+color: rgb(140, 139, 139);
+transform: translate(30px,18px);
+font-size: 14px;
+}
+
+@media (max-width: 720px) {
+  .all{
+    flex-direction: column;
+    width: 100%;
+  }
+  .profile-all{
+    width: 100%;
+  }
+  .trackers{
+  width: 100%;
+  flex-direction: column;
+}
+.trackers1{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.trackers2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+   height: 100%;
+}
+.work,.play,.study,.excersiise,.social,.selfc{
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+.imging{
+  width: 10%;
+  height: 50%;
+  border-radius:60%;
+  transform: translate(10%,50%);
+}
+.text1{
+  transform: translate(60px,-30px);
+  width: 100%;
+}
+.profilename{
+  transform: translate(70px,-30px);
+}
+.dashbord{
+   display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: rgb(146, 146, 146);
+}
+.navwork{
+display: flex;
+gap: 2rem;
+color: white;
+transform: translate(45px,10px);
+}
+.navworki{
+display: flex;
+gap: 2rem;
+color: white;
+transform: translate(85px,5px);
+font-size: 40px;
+}
+.js-txt1,.js-txt3,.js-txt5,.js-txt7,.js-txt9,.js-txt11{
+  display: flex;
+gap: 2rem;
+color: white;
+transform: translate(28px,40px);
+font-size: 40px;
+position: absolute;
+}
+.js-txt2,.js-txt4,.js-txt6,.js-txt8,.js-txt10,.js-txt12{
+ display: flex;
+gap: 2rem;
+color: rgb(140, 139, 139);
+transform: translate(170px,-40px);
+font-size: 18px;
+}
+
+}

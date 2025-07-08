@@ -1,82 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>before and after </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tracking-cal.css">
-  </head>
-  <body>
-    <div class="trackingcal">
 
-    <div class="profile">
-       <div class="profilepicture"></div>
-<p class="profilpurpose">Report for </p>
-<p class="profilname">Samson Ogundero </p>
-    </div>
-
-
-
-   <div class="boxbelowprofile">
-<p class="Daily" onclick="perform()">Daily</p>
-<p class="weekly" onclick="perform2()">Weekly</p>
-<p class="monthly" onclick="perform3()">monthy</p>
-      </div>
-
-
-<div class="besidebelowprofile1"></div>
-
-
-  <div class="sub1">
-<div class="besidebelowprofile1"><p class="txy-indiv1"> Work</p> 
-<p class="js-txt1"></p>
-<P class="hrs">hrs</P>
-<p class="js-txt2"></p>
-     </div>
-<div class="besidebelowprofile2"><p class="txy-indiv2">Exercise </p>
-          <p class="js-txt7"></p>
-    <P class="hrs">hrs</P>
-    <p class="js-txt8"></p>
-     </div>
-        </div>
-
-   <div class="sub2">
-<div class="besidebelowprofile1"><p class="txy-indiv1"> Play</p>
-      <p class="js-txt3"></p>
-      <P class="hrs">hrs</P>
-      <p class="js-txt4"></p>
-       </div>
-<div class="besidebelowprofile2"> <p class="txy-indiv2">Social </p>
-          <p class="js-txt9"></p>
-          <P class="hrs">hrs</P>
-          <p class="js-txt10"></p>     
-       </div>
-     </div>
-
-    <div class="sub3">
-<div class="besidebelowprofile1"><p class="txy-indiv1"> Study</p>
-        <p class="js-txt5"></p>
-      <P class="hrs">hrs</P>
-      <p class="js-txt6"></p>
-        </div>
-<div class="besidebelowprofile2"><p class="txy-indiv2">Self Care </p>
-      <p class="js-txt11"></p>
-      <P class="hrs">hrs</P>
-      <p class="js-txt12"></p>
-      </div>
-     </div>
-
-
-     </div>
-    <script>
-      let currentDuration = localStorage.getItem("duration")
-      console.log(currentDuration)
-
-      if(currentDuration === "weekly"){
-        perform2()
-      }
-function perform(){
-  localStorage.setItem("duration", "daily")
-  let datadaily={
+ function perform1(){
+        let datadaily={
     timewk:34,
     period1:'Last week - 36hr',
     timepl:23,
@@ -105,9 +29,7 @@ function perform(){
 console.log(show1);
 }
 function perform2(){
-  localStorage.setItem("duration", "weekly")
-
-  let datadaily={
+ let datadaily={
     timewk:96,
     period1:'Last week - 86hr',
     timepl:75,
@@ -135,6 +57,7 @@ function perform2(){
   let show12= document.querySelector('.js-txt12').innerHTML=`${datadaily.period6}`
 console.log(show1);
 }
+
 function perform3(){
   localStorage.setItem("duration", "monthly")
 
@@ -167,9 +90,4 @@ function perform3(){
   let show12= document.querySelector('.js-txt12').innerHTML=`${datadaily.period6}`
 console.log(show1);
 }
-
-
-    </script>
-    </body>
-</html>
 

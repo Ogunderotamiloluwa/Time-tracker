@@ -2,315 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Time Tracking Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Reset and base styles */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Rubik', Arial, sans-serif;
-      background: hsl(226, 43%, 10%);
-      color: hsl(236, 100%, 87%);
-      min-height: 100vh;
-      padding: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .dashboard {
-      display: flex;
-      gap: 2rem;
-      max-width: 1100px;
-      width: 100%;
-      flex-wrap: wrap;
-    }
-    .profile {
-      background: hsl(246, 80%, 60%);
-      border-radius: 1.5rem;
-      padding: 2rem 1.5rem 1.5rem 1.5rem;
-      color: #fff;
-      flex: 1 1 220px;
-      min-width: 220px;
-      max-width: 260px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 400px;
-    }
-    .profile .user {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .profile img {
-      width: 70px;
-      height: 70px;
-      border: 3px solid #fff;
-      border-radius: 50%;
-    }
-    .profile .user-info span {
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-    .profile .user-info h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-top: 0.2rem;
-    }
-    .timeframes {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .timeframes button {
-      background: none;
-      border: none;
-      color: hsl(236, 100%, 87%);
-      font-size: 1.1rem;
-      cursor: pointer;
-      opacity: 0.7;
-      transition: opacity 0.2s, color 0.2s;
-      text-align: left;
-      padding: 0.2rem 0;
-    }
-    .timeframes button.active,
-    .timeframes button:hover {
-      color: #fff;
-      opacity: 1;
-      text-decoration: underline;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      flex: 3 1 600px;
-      width: 100%;
-    }
-    .card {
-      position: relative;
-      border-radius: 1.5rem;
-      overflow: hidden;
-      min-height: 200px;
-      cursor: pointer;
-      transition: transform 0.15s;
-      background: hsl(235, 46%, 20%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-    .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-    }
-    .card-bg {
-      position: absolute;
-      top: 0; left: 0; right: 0; height: 60px;
-      z-index: 1;
-    }
-    .card-content {
-      position: relative;
-      z-index: 2;
-      background: hsl(235, 46%, 20%);
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .card-header h3 {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #fff;
-    }
-    .card-header img {
-      width: 24px;
-      height: 6px;
-      opacity: 0.5;
-      cursor: pointer;
-    }
-    .card-hours {
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: #fff;
-    }
-    .card-previous {
-      font-size: 0.95rem;
-      color: hsl(236, 100%, 87%);
-      opacity: 0.7;
-    }
-    /* Example background colors for cards */
-    .card-bg.work { background: hsl(15, 100%, 70%); }
-    .card-bg.play { background: hsl(195, 74%, 62%); }
-    .card-bg.study { background: hsl(348, 100%, 68%); }
-    .card-bg.exercise { background: hsl(145, 58%, 55%); }
-    .card-bg.social { background: hsl(264, 64%, 52%); }
-    .card-bg.self-care { background: hsl(43, 84%, 65%); }
-    @media (max-width: 900px) {
-      .dashboard { flex-direction: column; align-items: stretch; }
-      .cards { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 600px) {
-      body { padding: 0.5rem; }
-      .dashboard { gap: 1rem; }
-      .cards { grid-template-columns: 1fr; gap: 1rem; }
-      .profile { min-height: 200px; padding: 1rem; }
-    }
-  </style>
+  <title>Document</title>
+   <link rel="stylesheet" href="redp.css">
 </head>
 <body>
-  <div class="dashboard">
-    <div class="profile">
-      <div>
-        <div class="user">
-          <img src="images/image-jeremy.png" alt="Jeremy Robson">
-          <div class="user-info">
-            <span>Report for</span>
-            <h2>Jeremy Robson</h2>
-          </div>
-        </div>
-        <div class="timeframes">
-          <button class="active">Daily</button>
-          <button>Weekly</button>
-          <button>Monthly</button>
-        </div>
-      </div>
-    </div>
-    <div class="cards">
-      <div class="card" data-type="work">
-        <div class="card-bg work"></div>
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Work</h3>
-            <img src="images/icon-ellipsis.svg" alt="Options">
-          </div>
-          <div class="card-hours">5hrs</div>
-          <div class="card-previous">Yesterday - 7hrs</div>
-        </div>
-      </div>
-      <div class="card" data-type="play">
-        <div class="card-bg play"></div>
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Play</h3>
-            <img src="images/icon-ellipsis.svg" alt="Options">
-          </div>
-          <div class="card-hours">1hr</div>
-          <div class="card-previous">Yesterday - 2hrs</div>
-        </div>
-      </div>
-      <div class="card" data-type="study">
-        <div class="card-bg study"></div>
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Study</h3>
-            <img src="images/icon-ellipsis.svg" alt="Options">
-          </div>
-          <div class="card-hours">0hrs</div>
-          <div class="card-previous">Yesterday - 1hr</div>
-        </div>
-      </div>
-      <div class="card" data-type="exercise">
-        <div class="card-bg exercise"></div>
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Exercise</h3>
-            <img src="images/icon-ellipsis.svg" alt="Options">
-          </div>
-          <div class="card-hours">1hr</div>
-          <div class="card-previous">Yesterday - 1hr</div>
-        </div>
-      </div>
-      <div class="card" data-type="social">
-        <div class="card-bg social"></div>
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Social</h3>
-            <img src="images/icon-ellipsis.svg" alt="Options">
-          </div>
-          <div class="card-hours">1hr</div>
-          <div class="card-previous">Yesterday - 3hrs</div>
-        </div>
-      </div>
-      <div class="card" data-type="self-care">
-        <div class="card-bg self-care"></div>
-        <div class="card-content">
-          <div class="card-header">
-            <h3>Self Care</h3>
-            <img src="images/icon-ellipsis.svg" alt="Options">
-          </div>
-          <div class="card-hours">0hrs</div>
-          <div class="card-previous">Yesterday - 1hr</div>
-        </div>
-      </div>
-    </div>
+  <div class="all" >
+<div class="profile-all">
+  <div class="profile">
+    <p class="imging"></p>
+     <p class="text1">
+    Report for
+  </p>
+  <p class="profilename">
+    Samson Ogundero
+  </p>
   </div>
-  <script>
-    // Example data for each timeframe
-    const data = {
-      "work": {
-        daily: { current: 5, previous: 7, prevLabel: "Yesterday" },
-        weekly: { current: 32, previous: 36, prevLabel: "Last Week" },
-        monthly: { current: 103, previous: 128, prevLabel: "Last Month" }
-      },
-      "play": {
-        daily: { current: 1, previous: 2, prevLabel: "Yesterday" },
-        weekly: { current: 10, previous: 8, prevLabel: "Last Week" },
-        monthly: { current: 23, previous: 29, prevLabel: "Last Month" }
-      },
-      "study": {
-        daily: { current: 0, previous: 1, prevLabel: "Yesterday" },
-        weekly: { current: 4, previous: 7, prevLabel: "Last Week" },
-        monthly: { current: 13, previous: 19, prevLabel: "Last Month" }
-      },
-      "exercise": {
-        daily: { current: 1, previous: 1, prevLabel: "Yesterday" },
-        weekly: { current: 4, previous: 5, prevLabel: "Last Week" },
-        monthly: { current: 11, previous: 18, prevLabel: "Last Month" }
-      },
-      "social": {
-        daily: { current: 1, previous: 3, prevLabel: "Yesterday" },
-        weekly: { current: 5, previous: 10, prevLabel: "Last Week" },
-        monthly: { current: 21, previous: 23, prevLabel: "Last Month" }
-      },
-      "self-care": {
-        daily: { current: 0, previous: 1, prevLabel: "Yesterday" },
-        weekly: { current: 2, previous: 2, prevLabel: "Last Week" },
-        monthly: { current: 7, previous: 11, prevLabel: "Last Month" }
-      }
-    };
+  <div class="dashbord"> 
+    <p class="day" onclick="perform1()">Daily</p>
+    <p class="week" onclick="perform2()">weekly</p>
+    <p class="month" onclick="perform3()">monthly</p>
+  </div>
 
-    const timeframes = ["daily", "weekly", "monthly"];
-    const buttons = document.querySelectorAll('.timeframes button');
-    const cards = document.querySelectorAll('.card');
+</div>
+<div class="trackers">
+  <div class="trackers1">
+    
+<div class="work">
+  <nav class="navwork">work</nav>
+  <nav class="navworki">hrs</nav>
+  <nav class="js-txt1"></nav>
+  <nav class="js-txt2"></nav>
+</div>
+<div class="play">
+   <nav class="navwork">work</nav>
+  <nav class="navworki">hrs</nav>
+   <nav class="js-txt3"></nav>
+  <nav class="js-txt4"></nav>
+</div>
+<div  class="study">
+   <nav class="navwork">work</nav>
+  <nav class="navworki">hrs</nav>
+  <nav class="js-txt5"></nav>
+  <nav class="js-txt6"></nav>
+</div>
 
-    function updateCards(timeframe) {
-      cards.forEach(card => {
-        const type = card.getAttribute('data-type');
-        const hours = card.querySelector('.card-hours');
-        const previous = card.querySelector('.card-previous');
-        const info = data[type][timeframe];
-        hours.textContent = info.current + (info.current === 1 ? "hr" : "hrs");
-        previous.textContent = `${info.prevLabel} - ${info.previous}${info.previous === 1 ? "hr" : "hrs"}`;
-      });
-    }
-
-    buttons.forEach((btn, idx) => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        updateCards(timeframes[idx]);
-      });
-    });
-
-    // Initial population of card data
-    updateCards("daily");
+  </div>
+  
+   <div class="trackers2">
+    <div class="excersiise">
+       <nav class="navwork">work</nav>
+      <nav class="navworki">hrs</nav>
+      <nav class="js-txt7"></nav>
+  <nav class="js-txt8"></nav>
+    </div>
+<div class="social">
+   <nav class="navwork">work</nav>
+  <nav class="navworki">hrs</nav>
+  <nav class="js-txt9"></nav>
+  <nav class="js-txt10"></nav>
+</div>
+<div class="selfc">
+   <nav class="navwork">work</nav>
+  <nav class="navworki">hrs</nav>
+  <nav class="js-txt11"></nav>
+  <nav class="js-txt12"></nav>
+</div>
+  </div>
+</div>
+  </div>
+  <script src="redo.js">
   </script>
 </body>
 </html>
