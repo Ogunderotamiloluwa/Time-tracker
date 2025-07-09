@@ -3,7 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  background: linear-gradient(to bottom, rgb(62, 8, 113), rgb(150, 65, 190));
+  margin: 0;
+  height: 100vh;
+}
 .all{
   height: 60vh;
   width: 80%;
